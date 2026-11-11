@@ -1,5 +1,4 @@
 
-
 //import components.BookComponent;
 import components.standard.Standard;
 
@@ -58,7 +57,7 @@ public interface BookComponentKernel extends Standard<BookComponent> {
      * @return the status of this
      * @requires status = this.status
      */
-    Status setStatus();
+    Status status();
 
     /**
      * Reports the ISBN Code of {@code book} and returns it as a String.
