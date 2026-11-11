@@ -15,7 +15,7 @@ public interface BookComponentKernel extends Standard<BookComponent> {
         /**
          * Different reading statuses of the books.
          */
-        WANT_TO_READ, READ, READING
+        WANT_TO_READ, READ, READING, NOT_IN_LIST
     }
 
     /**
@@ -52,7 +52,8 @@ public interface BookComponentKernel extends Standard<BookComponent> {
     String isbnCode();
 
     /**
-     * Reports the ISBN Code of {@code book} and returns it as a String.
+     * Reports the status of this, whether it is read, want to read, or
+     * currently reading ans returns it.
      *
      * @return the status of this
      * @requires status = this.status
@@ -60,7 +61,7 @@ public interface BookComponentKernel extends Standard<BookComponent> {
     Status status();
 
     /**
-     * Reports the ISBN Code of {@code book} and returns it as a String.
+     * Reports the date read of this and returns it as an int.
      *
      * @return the read date of this
      * @requires dateRead = this.dateRead
