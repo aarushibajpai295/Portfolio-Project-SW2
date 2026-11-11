@@ -1,6 +1,16 @@
 # CHANGE LOG
 
-## 2026.11.11
+## 2026.11.11 #3
+
+### Added5
+
+- Implemented the class Book1L for kernel methods and standard methods for the BookComponent component.
+
+### Updates5
+
+- Updates include implementation of new kernel methods status(), dateRead(), setStatus(), setDateRead(). These implementations were not originally present in the proof of concept.
+
+## 2026.11.11 #2
 
 ### Added4
 
@@ -10,7 +20,7 @@
 
 - Updates include implementation of new secondary methods markRead(), markWantToRead(), isRead(). These implementations were not originally present in the proof of concept.
 
-## 2026.11.11
+## 2026.11.11 #1
 
 ### Added3
 

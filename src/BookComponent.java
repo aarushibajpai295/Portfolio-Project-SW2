@@ -2,8 +2,7 @@
 /**
  * {@code BookComponentKernel} enhanced with secondary emthods.
  */
-public interface BookComponent
-        extends BookComponentKernel, Comparable<BookComponent> {
+public interface BookComponent extends BookComponentKernel {
     /**
      * Returns a boolean value based on if this is the same book as
      * {@code BookComponent} b.
