@@ -220,54 +220,57 @@ will likely refine your design to make your implementation easier to use.
       are equal and based on that values sameBook(book a) secondary method
       can return a true or false value.
 
-- Component Design #2: BookCopy
+- Component Design #2: ConcertTicket
   - **Description**:
-    - This component would hold information about copies of a book, so we can correctly identify copies of a book and hold information related to that.
+    - This component would hold information about a concert ticket, such as artist, venue, time, location, etc.
   - **Kernel Methods**:
-    - Book copyOf()- Returns the title the book is a copy of
-    - Status statusOfBook()- Returns the status of the book/copy
-    - void setStatus(String s)- Sets the status of a book
+    - String artist()- Returns the artist that is performing
+    - String venue()- Returns the venue where the concert is held
+    - int date()- returns the date of the concert (in a format such that there are no / or . in between year, month and day)
+    - String seat()- returns the seat
+    - void redeem()- redeems the ticket
   - **Secondary Methods**:
-    - boolean isAvailable()- Returns true/false based on whether a book or its copies are available or not.
-    - void markLost()- Sets the status of a book or its copy as lost.
+    - String printInfo()- Returns a summary of all the important information about the concert, such as artist, venue, time, seat, etc.
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - Yes, because the status of a book or copy can change so it is mutable.
+      - Yes, because the kernel method redeemed changes
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
       - I don't know, but probably not as of now.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - Maybe, as we can hold different statuses as constants, like avaible, checked out, lost, on hold.
+      - Maybe, need to have constants for different statutes of the ticket like redeemed, expired, not redeemed
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - Yes, as we can use statusOfBook() to check if a book is avaialable and then use that for isAvailable() and we can use setStatus() to mark a book as lost for the markLost() secondary method.
+      - Yes, as we can use each of the kernels to return the artist, venue, date, time, seat information and add them to a string to be returned.
 
-- Component Design #3: User
+- Component Design #3: MusicPlaylist
   - **Description**:
-    - This component will hold all information about a user, such as their name, library card number, the books they have borrrowed, how many holds they have, etc.
+    - This component will hold all information about a playlist, what songs are in it, what position the songs are placed at, etc.
   - **Kernel Methods**:
-    - String nameOfUser()- returns a string, with the users name.
-    - int cardNum()- returns an int, with the library card number of the user.
-    - void borrow(Book b)- This adds a book to users borrowed list
-    - BookCopy returnBook()- This allows users to return a book they have borrowed.
-    - int numBorrowed()- Returns the number of books a user has borrowed.
-  - **Secondary Methods**:
-    - boolean canBorrow()- Returns if the user can borrow another book.
+    - void add(int pos, String songName)- add the specified song at the specified position
+    - String remove(int pos)- removes and returns an string with the songName at position pos
+    - String song(int pos)- Returns the song name at position pos
+    - int length()- Returns the number of songs in the playlist
+  - **Secondary Methods**
+    - void addToStart(String songName)- adds a song to the start of the playlist
+    - void addToEnd(String songName)- adds a song to the end of the playlist
+    - boolean contains(String songName)- reports whether songName is in the playlist
+    - void shuffle()- shuffles the songs in a random order
   - **Additional Considerations** (*note*: "I don't know" is an acceptable
     answer for each of the following questions):
     - Would this component be mutable? Answer and explain:
-      - Yes, as the amount of books borrowed, returned would be modified.
+      - Yes, as the add and remove kernel methods modify the playlist
     - Would this component rely on any internal classes (e.g., `Map.Pair`)?
       Answer and explain:
-      - I don't think so
+      - I don't know, maybe to hold song, artist and other information together.
     - Would this component need any enums or constants (e.g.,
       `Program.Instruction`)? Answer and explain:
-      - Yes, will need a constant for the maximum amount of loans.
+      - Probably not, since I don't see any need for constants yet.
     - Can you implement your secondary methods using your kernel methods?
       Answer, explain, and give at least one example:
-      - Yes, compare the number of the book the user has borrowed using the numBorrowed method and compare if with the max num of books that can be borrowed.
+      - Yes, as for example addTostart can be implemented using the add kernel method, with pos specified as 0.
 
 ## Post-Assignment
 
