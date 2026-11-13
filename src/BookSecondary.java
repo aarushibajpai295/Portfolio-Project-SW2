@@ -1,7 +1,7 @@
 /**
  * Layered implementation of BookSecondary.
  */
-public abstract class BookSecondary implements BookComponent {
+public abstract class BookSecondary implements Book {
     /**
      * Returns a boolean value based on if this is the same book as
      * {@code BookComponent} b.
@@ -13,9 +13,10 @@ public abstract class BookSecondary implements BookComponent {
      *
      * @requires book.isbnCode != null && this.isbnCode != null
      */
-    public final boolean sameBook(BookComponent book) {
+    @Override
+    public final boolean sameBook(Book book) {
         boolean sameBookAs = false;
-        sameBookAs = this.isbnCode().equals(book.isbnCode());
+        sameBookAs = this.title().equals(book.title());
         return sameBookAs;
     }
 
@@ -31,7 +32,8 @@ public abstract class BookSecondary implements BookComponent {
      *
      * @requires book.author != null && this.author != null
      */
-    public final boolean sameAuthor(BookComponent book) {
+    @Override
+    public final boolean sameAuthor(Book book) {
         boolean sameAuthorAs = this.author().equals(book.author());
         return sameAuthorAs;
     }
@@ -48,7 +50,8 @@ public abstract class BookSecondary implements BookComponent {
      *
      * @requires book.genre != null && this.genre != null
      */
-    public final boolean sameGenre(BookComponent book) {
+    @Override
+    public final boolean sameGenre(Book book) {
         boolean sameGenreAs = this.genre().equals(book.genre());
         return sameGenreAs;
     }
@@ -62,6 +65,7 @@ public abstract class BookSecondary implements BookComponent {
      * @requires date != null
      * @ensures this.status == READ && this.dateRead = date
      */
+    @Override
     public final void markRead(int date) {
         this.setStatus(Status.READ);
         this.setDateRead(date);
@@ -73,6 +77,7 @@ public abstract class BookSecondary implements BookComponent {
      * @updates this.status
      * @ensures this.status = WANT_TO_READ
      */
+    @Override
     public final void markWantToRead() {
         this.setStatus(Status.WANT_TO_READ);
     }
@@ -82,6 +87,7 @@ public abstract class BookSecondary implements BookComponent {
      *
      * @return true iff this has status READ.
      */
+    @Override
     public final boolean isRead() {
         boolean readOrNot = false;
         if (this.status() == Status.READ) {
@@ -96,13 +102,34 @@ public abstract class BookSecondary implements BookComponent {
 
     @Override
     public boolean equals(Object obj) {
-        boolean equalOrNot = false;
         if (obj == this) {
-            equalOrNot = true;
+            return true;
         }
         if (obj == null) {
-            equalOrNot = false;
+            return false;
         }
-        return equalOrNot;
+        if (!(obj instanceof Book)) {
+            return false;
+        }
+
+        Book other = (Book) obj;
+
+        return this.title().equals(other.title())
+                && this.author().equals(other.author())
+                && this.genre().equals(other.genre())
+                && this.status() == other.status()
+                && this.dateRead() == other.dateRead();
+    }
+
+    @Override
+    public final String toString() {
+        String result = "[Title: " + this.title() + ", Author: " + this.author()
+                + "Genre: " + this.genre() + "Status: " + this.status();
+
+        if (this.status() == Book.Status.READ) {
+            result += "Date Read: " + this.dateRead();
+        }
+        result += "]";
+        return result;
     }
 }

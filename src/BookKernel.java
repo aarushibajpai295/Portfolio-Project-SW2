@@ -5,7 +5,7 @@ import components.standard.Standard;
 /**
  * Book kernel component with primary methods.
  */
-public interface BookComponentKernel extends Standard<BookComponent> {
+public interface BookKernel extends Standard<Book> {
 
     /**
      *
@@ -42,14 +42,6 @@ public interface BookComponentKernel extends Standard<BookComponent> {
      * @requires book.genre != null
      */
     String genre();
-
-    /**
-     * Reports the ISBN Code of {@code book} and returns it as a String.
-     *
-     * @return the ISBN code of this
-     * @requires book.isbnCode != null
-     */
-    String isbnCode();
 
     /**
      * Reports the status of this, whether it is read, want to read, or

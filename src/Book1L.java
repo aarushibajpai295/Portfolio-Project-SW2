@@ -33,10 +33,6 @@ public class Book1L extends BookSecondary {
      */
     private String genre;
     /**
-     * Representation of {@code} this.isbnCode.
-     */
-    private String isbnCode;
-    /**
      * Representation of {@code} this.genre.
      */
     private int dateRead;
@@ -52,7 +48,6 @@ public class Book1L extends BookSecondary {
         this.title = "";
         this.author = "";
         this.genre = "";
-        this.isbnCode = "";
         this.dateRead = 0;
         this.status = Status.NOT_IN_LIST;
     }
@@ -73,22 +68,19 @@ public class Book1L extends BookSecondary {
      *            the {@code author} to initialize from
      * @param genre
      *            the {@code genre} to initialize from
-     * @param isbnCode
-     *            the {@code isbnCode} to initialize from
      * @param dateRead
      *            the {@code dateRead} to initialize from
      * @param status
      *            the {@code status} to initialize from
      */
-    public Book1L(String title, String author, String genre, String isbnCode,
-            int dateRead, Status status) {
+    public Book1L(String title, String author, String genre, int dateRead,
+            Status status) {
 
         this.createNewRep();
 
         this.title = title;
         this.author = author;
         this.genre = genre;
-        this.isbnCode = isbnCode;
         this.dateRead = dateRead;
         this.status = status;
     }
@@ -102,17 +94,16 @@ public class Book1L extends BookSecondary {
     }
 
     @Override
-    public final void transferFrom(BookComponent source) {
+    public final void transferFrom(Book source) {
         Book1L localSource = (Book1L) source;
 
         this.title = localSource.title;
         this.author = localSource.author;
         this.genre = localSource.genre;
-        this.isbnCode = localSource.isbnCode;
     }
 
     @Override
-    public final BookComponent newInstance() {
+    public final Book newInstance() {
         try {
             return this.getClass().getConstructor().newInstance();
         } catch (ReflectiveOperationException e) {
@@ -156,17 +147,6 @@ public class Book1L extends BookSecondary {
     public final String genre() {
         String genreOfBook = this.genre;
         return genreOfBook;
-    }
-
-    /**
-     * This method returns the ISBN code of a book.
-     *
-     * @return isbnOfBook this is the ISBN code of the book as a string
-     */
-    @Override
-    public final String isbnCode() {
-        String isbnOfBook = this.isbnCode;
-        return isbnOfBook;
     }
 
     /**

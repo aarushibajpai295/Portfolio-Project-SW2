@@ -2,7 +2,7 @@
 /**
  * {@code BookComponentKernel} enhanced with secondary emthods.
  */
-public interface BookComponent extends BookComponentKernel {
+public interface Book extends BookKernel {
     /**
      * Returns a boolean value based on if this is the same book as
      * {@code BookComponent} b.
@@ -12,9 +12,9 @@ public interface BookComponent extends BookComponentKernel {
      *            same.
      * @return true iff {@code book} is the same as this.
      *
-     * @requires book.isbnCode != null && this.isbnCode != null
+     * @requires book.title != null && this.title != null
      */
-    boolean sameBook(BookComponent book);
+    boolean sameBook(Book book);
 
     /**
      * Returns a boolean value if this and {@code BookComponent} book have the
@@ -28,7 +28,7 @@ public interface BookComponent extends BookComponentKernel {
      *
      * @requires book.author != null && this.author != null
      */
-    boolean sameAuthor(BookComponent book);
+    boolean sameAuthor(Book book);
 
     /**
      * Returns a boolean value if this and {@code BookComponent} book have the
@@ -42,7 +42,7 @@ public interface BookComponent extends BookComponentKernel {
      *
      * @requires book.genre != null && this.genre != null
      */
-    boolean sameGenre(BookComponent book);
+    boolean sameGenre(Book book);
 
     /**
      * Marks this as read by changing its status.

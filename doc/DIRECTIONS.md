@@ -76,18 +76,18 @@ a few sentences per question would be ideal.
 > complete the portfolio project, how much better (or worse) do you think you
 > understand software development and why?
 
-<!-- TODO: discuss -->
+I think I understand software development a lot better now as in class we only implement parts of a component and specially for me I used to sometimes ignore the parts of the project file that were already completed for us, such as the private members for example during class implementation. Doing this project really forced me to look at all the different parts of files of previous projects, so I could understand those implementations better and then use that understanding to implement my own component. Overall, I think the portfolio project helped me understand software developement a lot more than I did before.
 
 > Also, did the portfolio project surface any gaps in your own knowledge of
 > software development. If so, what are those gaps and how did you address them?
 
-<!-- TODO: discuss -->
+The portfolio project did surface some gaps in my knowledge of software developement, as I mentioned in the question above I didn't pay close attention to some of the pre-filled parts of the project files and did not try to understand the concept thoroughly, however doing the project did help me understand the purpose of those parts and how to implement them. I also learned how to implement an interface, which was something I hadn't done before.
 
 > Finally, as a part of completing the portfolio project, to what extent has
 > your perspective of software development changed, if at all? In other words,
 > is software development something you still enjoy? If not, why not?
 
-<!-- TODO: discuss -->
+I think I definitely still enjoy software development, I think I enjoyed working on this project more than our class projects, as I had more flexibility on what I could do.
 
 > One of the challenges of completing the portfolio project is picking up a lot
 > of skills on your own. Some of these skills are, of course, software skills.
@@ -95,25 +95,27 @@ a few sentences per question would be ideal.
 > this process. Therefore, the first question is what skills did you pick up
 > through this process?
 
-<!-- TODO: discuss -->
+I think I picked up a lot of software skills, learned how to piece different parts of a component together, how to write different files for components, how to use Git better and manage branches, and how to implement enums.
 
 > The follow-up question is: could you rephrase these skills you picked up
 > as bullet points that you could put on a resume? Try it below.
 
-<!-- TODO: discuss -->
+- Software Development Skills
+- Version Control Skills
+- Problem Solving
 
 > Next, how has working on this project affected your career trajectory?
 > In other words, do you now hate the topic you picked? Or, are you even more
 > interested in it? Both outcomes are valuable to your personal development.
 
-<!-- TODO: discuss -->
+I am definitely more interested in the topic I picked, and I would like to look at more oppurtunities to work on this more in the future. Possibly polish the component more and implement for an actual reading tracker.
 
 > Finally, consider the skills you've picked up and your current career
 > trajectory. What are some things you could do to continue on your
 > career trajectory? Also, who are some mentors you could contact to help
 > you stay on your path?
 
-<!-- TODO: discuss -->
+I think to continue on my career trajectory would be to keep building on this component possibly and create new software components from scratch. I think doing this will give me practice and a better understanding. I think some mentors I could contact to help stay on my path would definitely be my professors.
 
 ## Assignment Advice
 

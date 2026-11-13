@@ -12,18 +12,22 @@ public class BookConcept {
     /**
      * Representation of {@code} this.title.
      */
+    @SuppressWarnings("unused")
     private String title;
     /**
      * Representation of {@code} this.author.
      */
+    @SuppressWarnings("unused")
     private String author;
     /**
      * Representation of {@code} this.genre.
      */
+    @SuppressWarnings("unused")
     private String genre;
     /**
      * Representation of {@code} this.isbnCode.
      */
+    @SuppressWarnings("unused")
     private String isbnCode;
 
     /**

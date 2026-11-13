@@ -1,10 +1,21 @@
 # CHANGE LOG
 
+## 2026.11.12
+
+### Added6
+
+- Designed test suite for Book component
+- Designed two different use cases for Book component
+
+### Updates6
+
+- Updates include removing of the isbnCode() input in the Book component.
+
 ## 2026.11.11 #3
 
 ### Added5
 
-- Implemented the class Book1L for kernel methods and standard methods for the BookComponent component.
+- Implemented the class Book1L for kernel methods and standard methods for the Book component.
 
 ### Updates5
 
