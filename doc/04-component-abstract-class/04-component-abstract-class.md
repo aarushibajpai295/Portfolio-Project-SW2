@@ -131,8 +131,8 @@ Below is further rationale/explanation for the rubric items above:
 > request to see if your different features fit together. Once the pull request
 > merges, you will need to pull the changes from main into your current branch
 > to see them. If you don't like this workflow, you may try following the
-> rebase strategies described [here](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
-> and [here](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
+> rebase strategies described [here is](https://stackoverflow.com/questions/35790561/working-while-waiting-for-pending-pr)
+> and [here is](https://stackoverflow.com/questions/18021888/continue-working-on-a-git-branch-after-making-a-pull-request).
 
 ## Assignment Tasks
 
