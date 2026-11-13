@@ -118,7 +118,7 @@ Below is further rationale/explanation for the rubric items above:
 > discuss how that representation will be restricted (i.e., by convention)
 > and interpreted (i.e., by correspondence).
 
-<!-- TODO: select a representation and explain why -->
+Each part of the Book component will be modeled on either String, int, or an enum. A string makes most sense for the title, author, and genre as they are words and can be easily held in strings. int makes most sense for dateRead as it can be easily converted into any date format by perfoming division and mod operations. An enum makes the most sense for status as there are four different fixed types of status that can be possible so a enum holding those 4 makes the most sense.
 
 > To start making your kernel implementation, make a branch off of main in your
 > new repo called something like `kernel-implementation`. There are many ways to
